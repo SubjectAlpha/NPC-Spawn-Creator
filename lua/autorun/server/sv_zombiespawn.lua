@@ -11,13 +11,13 @@ function ZombieSpawns()
 
             for k, v in pairs( ZombieSpawnPoints ) do
 
-                    local zombie = ents.Create( "npc_" ) --Create whatever NPC you want it to here.
-                    zombie:SetPos( v.pos )
-					zombie:SetCustomCollisionCheck( true )
-                    zombie:Spawn()
-                    zombie:Activate()
+               local zombie = ents.Create( "npc_zombie" ) --Create whatever NPC you want it to here.
+                zombie:SetPos( v.pos )
+		zombie:SetCustomCollisionCheck( true )
+                zombie:Spawn()
+                zombie:Activate()
 
-                    numZombies = numZombies + 1
+                numZombies = numZombies + 1
 
             end
 
@@ -27,7 +27,7 @@ function ZombieSpawns()
 	
 end
 
-hook.Add( "ShouldCollide", "ZombieNoCollide", function( ent1, ent2 )
+hook.Add( "ShouldCollide", "NPCNoCollide", function( ent1, ent2 )
 
     if ( ent1:GetClass() == "npc_zombie" and ent2:GetClass() == "npc_zombie" ) then --Change the NPC to whatever you want.
 

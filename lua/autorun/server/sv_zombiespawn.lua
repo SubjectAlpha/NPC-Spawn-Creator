@@ -32,7 +32,7 @@ end
 
 hook.Add( "ShouldCollide", "NPCNoCollide", function( ent1, ent2 )
 
-    if ( ent1:GetClass() == "npc_zombie" and ent2:GetClass() == "npc_zombie" ) then --Change the NPC to whatever you want.
+    if ( ent1:GetClass() == "npc_zombie" and ent2:GetClass() == "npc_zombie" ) then
 
         return false
 
@@ -44,7 +44,7 @@ hook.Add( "InitPostEntity", "StartZombieSpawning", ZombieSpawns )
 
 hook.Add( "ShouldCollide", "NPCNoCollide", function( ent1, ent2 )
 
-    if ( ent1:GetClass() == "npc_zombie" and ent2:GetClass() == "npc_zombie" ) then --Change the NPC to whatever you want.
+    if ( ent1:GetClass() == "npc_zombie" and ent2:GetClass() == "npc_zombie" ) then 
 
         return false
 
